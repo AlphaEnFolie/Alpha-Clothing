@@ -1,0 +1,79 @@
+
+
+.ui {
+    position: fixed;
+    right: 0vw;
+    top: 20%;
+    transform: translateY(-50%);
+    display: none;
+    z-index: 444;
+    animation: anim2 .6s;
+}
+
+@keyframes anim2 {
+    0%{
+        transform: translateX(5vw);
+    }
+    100%{
+        transform: translateX(0vw);
+    }
+}
+
+.menu-lateral{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: .60vw;
+    height: max-content;
+    right: .80vw;
+    padding: .15vw;
+    z-index: 800;
+    background-color: #4e4e4e75;
+    border-radius: .35vw;
+    transition: .5s;
+}
+
+.menu-lateral .boton{
+    float: left;
+    margin-bottom: .15vw;
+    padding: .5vw;
+    text-align:center;
+    height: max-content;
+    transition:ease-in-out 0.3s all;
+    cursor: pointer;
+}
+
+.menu-lateral .boton img{
+    width:1vw;
+    transition:ease-in-out 0.3s all;
+
+}
+
+.menu-lateral .boton:hover{
+    border-radius: .2vw;
+    background-color: rgba(255, 231, 77, 0.616);
+}
+
+/*ANIMATIONS*/
+
+.menu-lateral #notis {
+    position: absolute;
+    top: 0;
+    left: .1vw;
+    font-size: 14px;
+    background-color: rgb(41, 41, 41);
+    color: #dfdfdf;
+    padding: 5px 8px;
+    border-radius: .15vw;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 10px rgb(7, 7, 7);
+    transition: .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menu-lateral .boton:hover #notis {
+    top: -2vw;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
